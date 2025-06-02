@@ -157,6 +157,8 @@ The port scanner supports various modes optimized for different scenarios:
 - `"80,443,8080"`: Specific ports (targeted scanning)
 - `"1-1000"`: Port range (internal network scanning)
 
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png)
+
 ## 🏗 Architecture
 
 ### Project Structure
