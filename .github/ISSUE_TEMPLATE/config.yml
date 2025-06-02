@@ -1,0 +1,14 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 📚 Documentation
+    url: https://github.com/sundayz-hunter/MCP_Recon/blob/main/README.md
+    about: Check out the comprehensive documentation and usage examples before creating an issue
+  - name: 🛡️ Security Research Guidelines
+    url: https://github.com/sundayz-hunter/MCP_Recon/blob/main/README.md#-security-considerations
+    about: Review responsible disclosure practices and security considerations
+  - name: 🎯 Bug Bounty Best Practices
+    url: https://github.com/sundayz-hunter/MCP_Recon/blob/main/README.md#-bug-bounty-best-practices
+    about: Learn how to use this toolkit effectively for bug bounty research
+  - name: 🤝 Contributing Guide
+    url: https://github.com/sundayz-hunter/MCP_Recon/blob/main/.github/CONTRIBUTING.md
+    about: Learn how to contribute new reconnaissance tools and improvements

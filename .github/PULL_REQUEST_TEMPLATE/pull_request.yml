@@ -1,0 +1,162 @@
+name: 🚀 Pull Request
+description: Contribute to the MCP Web Reconnaissance Server with your changes
+title: "type(scope): "
+labels: []
+body:
+- type: markdown
+  attributes:
+    value: |
+      Thanks for contributing to the MCP Web Reconnaissance Server! Please fill out the information below to help us review your pull request.
+      
+      **Title Examples:**
+      - `feat(dns): add advanced subdomain enumeration with custom wordlist`
+      - `fix(network): resolve nmap timeout issues for large scans`
+      - `docs(readme): update installation instructions for macOS`
+      - `perf(passive): optimize certificate transparency queries`
+- type: textarea
+  attributes:
+    label: Description
+    description: Please provide a summary of the changes and which issue is fixed.
+    placeholder: |
+      This PR adds/fixes/improves...
+      
+      **Changes:**
+      - Added new reconnaissance tool for X
+      - Fixed bug in Y functionality  
+      - Improved performance of Z
+      
+      **Resolves:** #(issue number)
+  validations:
+    required: true
+- type: dropdown
+  id: change-type
+  attributes:
+    label: Type of Change
+    description: What kind of change does this PR introduce?
+    options:
+      - New reconnaissance tool
+      - Bug fix (non-breaking change that fixes an issue)
+      - Enhancement to existing tool
+      - Breaking change (fix or feature with incompatible changes)
+      - Performance improvement
+      - Code refactoring (no functional changes)
+      - Documentation update
+      - Installation/Setup improvement
+      - Security improvement
+      - Other (please describe)
+  validations:
+    required: true
+- type: dropdown
+  id: tool-category
+  attributes:
+    label: Tool Category (if applicable)
+    description: Which category of reconnaissance tools does this affect?
+    options:
+      - Information Gathering (WHOIS, Domain History)
+      - DNS Analysis (DNS Records, Subdomain Enumeration)
+      - Network Reconnaissance (Port Scanning, IP Info)
+      - Web Application Analysis (TLS, Headers, Technology Detection)
+      - MCP Server Core
+      - Documentation/Setup
+      - Multiple Categories
+      - Not Applicable
+  validations:
+    required: false
+- type: textarea
+  attributes:
+    label: Implementation Details
+    description: |
+      Provide technical details that would help reviewers understand your changes.
+      Include any new dependencies, API integrations, or significant algorithmic changes.
+    placeholder: |
+      **Technical Details:**
+      - Added new Python library: python-censys for IP enumeration
+      - Implemented rate limiting with exponential backoff
+      - Added concurrent processing with ThreadPoolExecutor
+      - Integrated with Certificate Transparency API v2
+  validations:
+    required: false
+- type: textarea
+  attributes:
+    label: Testing Completed
+    description: |
+      Describe the testing you've done to verify your changes work correctly.
+      Include specific targets tested (use example.com) and tool outputs.
+    placeholder: |
+      **Testing Performed:**
+      - [ ] Tested passive subdomain enumeration on example.com
+      - [ ] Verified active DNS brute force with custom wordlist
+      - [ ] Tested on multiple Python versions (3.10, 3.11, 3.12)
+      - [ ] Validated against rate limiting scenarios
+      - [ ] Tested error handling with invalid inputs
+      - [ ] Verified output JSON format consistency
+      
+      **Test Results:**
+      - example.com: Found 5 subdomains via CT logs
+      - Port scan completed in 45 seconds
+      - No false positives detected
+  validations:
+    required: true
+- type: textarea
+  attributes:
+    label: Bug Bounty/Security Testing
+    description: |
+      If this change affects security research capabilities, describe how it improves bug bounty workflows.
+    placeholder: |
+      **Security Research Impact:**
+      - Reduces reconnaissance time by 40%
+      - Adds stealth passive discovery option
+      - Improves subdomain coverage for large targets
+      - Better integration with existing bug bounty tools
+  validations:
+    required: false
+- type: checkboxes
+  id: checklist
+  attributes:
+    label: Checklist
+    description: Please confirm that your PR meets these requirements.
+    options:
+      - label: My code follows the Python style guidelines (PEP 8)
+        required: true
+      - label: I have performed a self-review of my own code
+        required: true
+      - label: I have commented my code in English, particularly in hard-to-understand areas
+        required: true
+      - label: I have updated the documentation (README.md) as necessary
+        required: true
+      - label: My changes generate no new warnings or errors
+        required: true
+      - label: I have tested my changes with the MCP server
+        required: true
+      - label: I have verified compatibility with required Python versions (3.10+)
+        required: true
+      - label: I have followed responsible disclosure practices in my testing
+        required: true
+      - label: Any new dependencies are properly documented in pyproject.toml
+        required: false
+- type: textarea
+  attributes:
+    label: Screenshots/Output Examples
+    description: |
+      If applicable, add screenshots or example tool outputs to help explain your changes.
+      Please redact any sensitive information and use example.com for demonstrations.
+      
+      Tip: You can attach images or files by clicking this area and dragging files in.
+  validations:
+    required: false
+- type: textarea
+  attributes:
+    label: Breaking Changes
+    description: |
+      If this is a breaking change, please describe what users need to do to adapt their usage.
+    placeholder: |
+      **Breaking Changes:**
+      - Tool parameter X renamed to Y
+      - Output format changed from A to B
+      - Minimum Python version increased to 3.11
+      
+      **Migration Guide:**
+      - Replace `old_parameter` with `new_parameter`
+      - Update JSON parsing to handle new field names
+  validations:
+    required: false

@@ -1,0 +1,138 @@
+name: 🐞 Bug Report
+description: Report a bug to help us improve the MCP Web Reconnaissance Server
+title: "bug: "
+labels: ["bug"]
+body:
+- type: textarea
+  attributes:
+    label: Current Behavior
+    description: A clear and concise description of what the bug is.
+  validations:
+    required: true
+- type: textarea
+  attributes:
+    label: Expected Behavior
+    description: A clear and concise description of what you expected to happen.
+  validations:
+    required: true
+- type: textarea
+  attributes:
+    label: Steps To Reproduce
+    description: Steps to reproduce the behavior.
+    placeholder: |
+      1. Run the reconnaissance tool '...'
+      2. Execute command with parameters '...'
+      3. See error...
+  validations:
+    required: true
+- type: dropdown
+  attributes:
+    label: Tool Category
+    description: Which category of tools is affected?
+    options:
+      - Information Gathering (WHOIS, Domain History)
+      - DNS Analysis (DNS Records, Subdomain Enumeration)
+      - Network Reconnaissance (Port Scanning, IP Info)
+      - Web Application Analysis (TLS, Headers, Technology Detection)
+      - Multiple Categories
+      - Unsure
+  validations:
+    required: true
+- type: dropdown
+  attributes:
+    label: Specific Tool
+    description: Which specific tool is causing the issue?
+    options:
+      - whois_info
+      - domain_history
+      - dns_records
+      - reverse_dns
+      - subdomain_enum_passive
+      - subdomain_enum_active
+      - ip_information
+      - check_alive
+      - port_scan
+      - tls_certificate
+      - http_headers
+      - detect_technologies
+      - extract_urls
+      - MCP Server Core
+      - Installation/Setup
+      - Documentation
+      - Other
+  validations:
+    required: true
+- type: textarea
+  attributes:
+    label: Environment
+    description: |
+      Please provide details about your environment.
+      Examples:
+        - **Python Version**: 3.11.5
+        - **OS**: Ubuntu 22.04 / Windows 11 / macOS 14.1
+        - **MCP Server Version**: 1.0.0
+        - **UV Version**: 0.4.0
+        - **Nmap Version**: 7.94
+    value: |
+        - Python Version: 
+        - OS: 
+        - MCP Server Version: 
+        - UV Version: 
+        - Nmap Version: 
+    render: markdown
+  validations:
+    required: true
+- type: textarea
+  attributes:
+    label: Command/Tool Output
+    description: |
+      Please include the exact command used and the error output (if any).
+      Remove any sensitive information like internal IPs or domains.
+    placeholder: |
+      Command: subdomain_enum_active("example.com")
+      Error: maximum recursion depth exceeded
+  validations:
+    required: false
+- type: textarea
+  attributes:
+    label: Target Information
+    description: |
+      If applicable, provide non-sensitive information about the target being scanned.
+      Use example.com or similar for demonstration purposes.
+    placeholder: |
+      Target: example.com
+      Wordlist size: 211 entries
+      Expected subdomains: www, api, mail
+  validations:
+    required: false
+- type: textarea
+  attributes:
+    label: Screenshots/Logs
+    description: |
+      If applicable, add screenshots or log files to help explain your problem.
+      Please redact any sensitive information.
+  validations:
+    required: false
+- type: textarea
+  attributes:
+    label: Additional Context
+    description: |
+      Any additional information that might be helpful for bug bounty or security research context?
+      
+      Tip: You can attach log files or screenshots by clicking this area to highlight it and then dragging files in.
+  validations:
+    required: false
+- type: checkboxes
+  id: acknowledgements
+  attributes:
+    label: Acknowledgements
+    description: Please confirm the following before submitting your bug report.
+    options:
+      - label: I have searched existing issues and this bug has not been reported yet.
+        required: true
+      - label: I have included all requested information to help reproduce the issue.
+        required: true
+      - label: I am using the latest version of the MCP Web Reconnaissance Server.
+        required: true
+      - label: I have followed responsible disclosure practices and only tested on authorized targets.
+        required: true
