@@ -1,6 +1,6 @@
 [project]
 name = "iflow-mcp_sundayz-hunter-mcp-recon"
-version = "1.0.0"
+version = "1.0.2"
 description = "MCP Server for Web Reconnaissance with Python-native tools"
 authors = [
     {name = "Sundayz", email = "sundayz@example.com"}

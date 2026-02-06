@@ -8,22 +8,22 @@ from mcp.server.fastmcp import FastMCP
 from typing import List
 
 # Import all tool modules
-from tools.info_tools import (
+from .tools.info_tools import (
     whois_lookup,
     domain_history_check
 )
-from tools.dns_tools import (
+from .tools.dns_tools import (
     dns_lookup,
     subdomain_enum_active as subdomain_enum_active_impl,
     subdomain_enum_passive as subdomain_enum_passive_impl,
     reverse_dns_lookup
 )
-from tools.network_tools import (
+from .tools.network_tools import (
     port_scan_nmap,
     ip_info,
     check_alive_httpx
 )
-from tools.web_tools import (
+from .tools.web_tools import (
     web_headers,
     tls_certificate_check,
     extract_urls_katana,
