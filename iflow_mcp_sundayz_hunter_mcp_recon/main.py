@@ -170,5 +170,8 @@ def extract_urls(url: str) -> str:
     return extract_urls_katana(url)
 
 
-if __name__ == "__main__":
+def main():
     mcp.run()
+
+if __name__ == "__main__":
+    main()
